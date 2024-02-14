@@ -3,7 +3,7 @@
 * *Date Created*: 11 Feb 2024
 * *Last Modification Date*: 13 Feb 2024
 * *Tutorial URL*: https://main--csci5709-tutorial3-register.netlify.app/
-* *Git URL*: https://git.cs.dal.ca/gosaliya/csci5709-tutorials.git
+* *Git URL*: https://git.cs.dal.ca/gosaliya/csci5709-tutorials/-/tree/main/Tutorial3?ref_type=heads
 
 ## Authors
 
