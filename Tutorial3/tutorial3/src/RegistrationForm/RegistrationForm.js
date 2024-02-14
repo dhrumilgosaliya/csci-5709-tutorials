@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
@@ -20,13 +21,13 @@ const RegistrationForm = () => {
     setFormData({ ...formData, [name]: value });
     setErrors({ ...errors, [name]: '' }); // Clearing error when input changes
   };
-
+  const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
     const validationErrors = validateForm(formData);
     if (Object.keys(validationErrors).length === 0) {
       // Form is valid, redirect to profile page
-      window.location.href = '/profile';
+      navigate('/profile');
     } else {
       // Update errors state with validation errors
       setErrors(validationErrors);
