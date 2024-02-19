@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import { Container, TextField, Button, Typography, Grid } from '@material-ui/core';
+import { Container, TextField, Button, Typography, Grid } from '@mui/material';
 
 const Login = () => {
     // hook for navigation
