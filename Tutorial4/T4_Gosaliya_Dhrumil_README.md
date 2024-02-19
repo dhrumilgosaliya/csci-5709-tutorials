@@ -2,8 +2,8 @@
 
 * *Date Created*: 18 Feb 2024
 * *Last Modification Date*: 19 Feb 2024
-* *Tutorial URL*: 
-* *Git URL*: 
+* *Tutorial URL*: https://main--tutorial4-csci-5709.netlify.app/
+* *Git URL*: https://git.cs.dal.ca/gosaliya/csci5709-tutorials/-/tree/main/Tutorial4?ref_type=heads
 
 ## Authors
 
@@ -45,21 +45,21 @@ npm run start
 *Lines 18 - 34*
 
 ```
-   try {
-            // Sending login credentials to the server
+       try {
+            // login credentials api check
             const response = await axios.post('https://express-t4.onrender.com/api/login', {
                 username: email,
                 password: password
             });
-            // Navigating to the profile list page upon successful login
+            // navigate to other page
             navigate('/profilelist');
-            // Logging successful login response
+            // login successful
             console.log('Login successful:', response.data);
             
         } catch (error) {
             // Handling login error
             console.error('Login error:', error);
-            // Setting error message for invalid login
+            // error message for invalid login
             setErrorMessage('Invalid email or password');
         }
 ```
@@ -80,12 +80,15 @@ const handleSubmit = (e) => {
 
 ```
 
-*Line 28 - 39*
+### Profile.js
+
+*Line 31 - 43*
 
 ```
 useEffect(() => {
     const fetchUsers = async () => {
       try {
+        // API to fetch list of user
         const response = await axios.get('https://express-t4.onrender.com/api/users');
         setUsers(response.data);
       } catch (error) {
@@ -116,7 +119,6 @@ useEffect(() => {
 
 ```
 
-### Profile.js
 *Line 79*
 
 ```
@@ -133,21 +135,6 @@ The code above was created by adapting the code in [How to style your React-Rout
 
 ```
 
-*Line 79*
-
-```
-<Link to={`/profile/${user._id}`} style={{ textDecoration: 'none' }}> 
-```
-
-The code above was created by adapting the code in [How to style your React-Router links using styled-components](https://dev.to/ridhikgovind/how-to-style-your-react-router-links-using-styled-components-2350) as shown below:
-
-
-```
-<Link to="/" style={linkStyle}>
-  Home
-</Link>
-
-```
 ### ProfileDetail.js
 *Line 33-56*
 
@@ -175,7 +162,7 @@ The code above was created by adapting the code in [How to style your React-Rout
       </List>
       <Typography variant="body1">Greeting: {user.greeting}</Typography>
       <Typography variant="body1">Tags: {user.tags.join(', ')}</Typography>
-    </Container>
+</Container>
 ```
 The code above was created by adapting the code in [Typography](https://mui.com/material-ui/react-typography/) as shown below:
 
