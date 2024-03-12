@@ -25,7 +25,8 @@ app.get('/users', (req, res) => {
 // post api to add a new user
 app.post('/add', (req, res) => {
     const newUser = req.body;
-    newUser.id = uuidv4(); // create a random id for the new user
+    // create a random id for the new user
+    newUser.id = uuidv4(); 
     users.push(newUser);
     res.json({ message: "User added", success: true });
 });
